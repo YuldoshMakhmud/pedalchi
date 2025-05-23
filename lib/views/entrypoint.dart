@@ -1,11 +1,23 @@
+// ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/controllers/tab_index_conroller.dart';
+import 'package:foodchi/views/cart/cart_page.dart';
+import 'package:foodchi/views/home/home_page.dart';
+import 'package:foodchi/views/profile/profile_page.dart';
+import 'package:foodchi/views/search/search_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+   MainScreen({super.key});
+
+  List<Widget> pageList = [
+    HomePage(),
+    SearchPage(),
+    ProfilePage(),
+    CartPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +26,7 @@ class MainScreen extends StatelessWidget {
       () => Scaffold(
         body: Stack(
           children: [
-            Container(height: hieght, width: width, color: kOffWhite),
+           pageList[controller.tabIndex],
             Align(
               alignment: Alignment.bottomCenter,
               child: Theme(
@@ -35,7 +47,8 @@ class MainScreen extends StatelessWidget {
                       icon:
                           controller.tabIndex == 0
                               ? Icon(AntDesign.appstore1)
-                              : Icon(AntDesign.appstore_o), label: "home"
+                              : Icon(AntDesign.appstore_o),
+                      label: "home",
                     ),
                     const BottomNavigationBarItem(
                       icon: Icon(Icons.search),
@@ -44,11 +57,15 @@ class MainScreen extends StatelessWidget {
                     const BottomNavigationBarItem(
                       icon: Badge(
                         label: Text('1'),
-                        child: Icon(FontAwesome.opencart)),
+                        child: Icon(FontAwesome.opencart),
+                      ),
                       label: "Cart",
                     ),
-                     BottomNavigationBarItem(
-                      icon: controller.tabIndex == 3 ? Icon(FontAwesome.user_circle): Icon(FontAwesome.user_circle_o),
+                    BottomNavigationBarItem(
+                      icon:
+                          controller.tabIndex == 3
+                              ? Icon(FontAwesome.user_circle)
+                              : Icon(FontAwesome.user_circle_o),
                       label: "Profile",
                     ),
                   ],
