@@ -8,6 +8,8 @@ import 'package:foodchi/views/home/all_fastest_foods_page.dart';
 import 'package:foodchi/views/home/all_nearby_restaurants.dart';
 import 'package:foodchi/views/home/recommendations_page.dart';
 import 'package:foodchi/views/home/widget/category_list.dart';
+import 'package:foodchi/views/home/widget/food_list.dart';
+import 'package:foodchi/views/home/widget/nearby_restaurants_list.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,6 +34,7 @@ class HomePage extends StatelessWidget {
                     duration: const Duration(milliseconds: 900));
               },
             ),
+            NearbyRestaurants(),
             Heading(
               text: "Try Something New",
               onTap: () {
@@ -40,6 +43,7 @@ class HomePage extends StatelessWidget {
                     duration: const Duration(milliseconds: 900));
               },
             ),
+            FoodsList(),
             Heading(
               text: "Food closer to you",
               onTap: () {
@@ -48,6 +52,7 @@ class HomePage extends StatelessWidget {
                     duration: const Duration(milliseconds: 900));
               },
             ),
+            FoodsList(),
           ],
         )),
       ),
