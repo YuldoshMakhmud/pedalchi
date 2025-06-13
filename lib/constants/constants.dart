@@ -21,7 +21,7 @@ double width = 375.w;
 
 
 // const String {Environment.appBaseUrl} = "https://foodlybackend-production-4026.up.railway.app";
-// const String {Environment.appBaseUrl} = "http://localhost:6003";
+const String appBaseUrl = "http://localhost:6003";
 
 final List<String> verificationReasons = [
   'Real-time Updates: Get instant notifications about your order status.',
