@@ -45,7 +45,7 @@ class RestaurantTile extends StatelessWidget {
                             bottom: 0,
                             child: Container(
                               padding: EdgeInsets.only(left: 6.w, bottom: 2.h),
-                              color: kGray.withOpacity(0.6),
+                              color: kGray,
                               height: 16.h,
                               width: width,
                               child: RatingBarIndicator(

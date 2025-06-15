@@ -1,11 +1,11 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/models/api_eror.dart';
 import 'package:foodchi/models/categories.dart';
 import 'package:foodchi/models/hook_models/hook_result.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:http/http.dart' as http;
 
-FetchHook useFetchCategories() {
+FetchHook useFetchAlCategories() {
   final categoriesItems = useState<List<CategoriesModel>?>(null);
   final isLoading = useState<bool>(false);
   final error = useState<Exception?>(null);
@@ -15,10 +15,8 @@ FetchHook useFetchCategories() {
     isLoading.value = true;
 
     try {
-      Uri url = Uri.parse('$appBaseUrl/api/category/random');
+      Uri url = Uri.parse('$appBaseUrl/api/category');
       final response = await http.get(url);
-        print(response.statusCode);
-      
       if (response.statusCode == 200) {
         categoriesItems.value = categoriesModelFromJson(response.body);
       } else {
@@ -40,6 +38,7 @@ FetchHook useFetchCategories() {
     isLoading.value = true;
     fetchData();
   }
+
   return FetchHook(
     data: categoriesItems.value,
     isLoading: isLoading.value,

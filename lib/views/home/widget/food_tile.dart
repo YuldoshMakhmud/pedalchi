@@ -7,7 +7,7 @@ import 'package:foodchi/common/reusable_text.dart';
 import 'package:foodchi/constants/constants.dart';
 
 class FoodTile extends StatelessWidget {
-  FoodTile({super.key, required this.food});
+  const FoodTile({super.key, required this.food});
 
   final dynamic food;
 
@@ -45,7 +45,7 @@ class FoodTile extends StatelessWidget {
                             bottom: 0,
                             child: Container(
                               padding: EdgeInsets.only(left: 6.w, bottom: 2.h),
-                              color: kGray.withOpacity(0.6),
+                              color: kGray,
                               height: 16.h,
                               width: width,
                               child: RatingBarIndicator(

@@ -15,6 +15,6 @@ class ProfilePage extends StatelessWidget {
         child: Container(height: 130),
       ),
       body: SafeArea(child: CustomContainer(containerContent: Container())),
-    );;
+    );
   }
 }

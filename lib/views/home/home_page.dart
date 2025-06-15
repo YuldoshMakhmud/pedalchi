@@ -34,7 +34,9 @@ class HomePage extends StatelessWidget {
                     duration: const Duration(milliseconds: 900));
               },
             ),
-            NearbyRestaurants(),
+
+            const NearbyRestaurants(),
+            
             Heading(
               text: "Try Something New",
               onTap: () {
@@ -43,7 +45,9 @@ class HomePage extends StatelessWidget {
                     duration: const Duration(milliseconds: 900));
               },
             ),
-            FoodsList(),
+
+            const FoodsList(),
+
             Heading(
               text: "Food closer to you",
               onTap: () {
@@ -52,7 +56,7 @@ class HomePage extends StatelessWidget {
                     duration: const Duration(milliseconds: 900));
               },
             ),
-            FoodsList(),
+            const FoodsList(),
           ],
         )),
       ),
