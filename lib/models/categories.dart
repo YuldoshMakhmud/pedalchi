@@ -1,7 +1,6 @@
 // To parse this JSON data, do
 //
-//     final categiesModel = categiesModelFromJson(jsonString);
-
+//     final categoriesModel = categoriesModelFromJson(jsonString);
 import 'dart:convert';
 
 List<CategoriesModel> categoriesModelFromJson(String str) => List<CategoriesModel>.from(json.decode(str).map((x) => CategoriesModel.fromJson(x)));
