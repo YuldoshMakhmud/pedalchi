@@ -7,9 +7,10 @@ import 'package:foodchi/common/reusable_text.dart';
 import 'package:foodchi/constants/constants.dart';
 
 class FoodTile extends StatelessWidget {
-  const FoodTile({super.key, required this.food});
+  const FoodTile({super.key, required this.food, this.color,});
 
   final dynamic food;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class FoodTile extends StatelessWidget {
               height: 70.h,
               width: width,
               decoration: BoxDecoration(
-                  color: kOffWhite, borderRadius: BorderRadius.circular(9.r)),
+                  color: color?? kOffWhite, borderRadius: BorderRadius.circular(9.r)),
               child: Container(
                 padding: EdgeInsets.all(4.r),
                 child: Row(
