@@ -9,7 +9,7 @@ import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/controllers/category_controller.dart';
 import 'package:foodchi/hooks/fetch_category_foods.dart';
 import 'package:foodchi/models/foods_model.dart';
-import 'package:foodchi/views/home/widget/food_tile.dart';
+import 'package:foodchi/views/home/widgets/food_tile.dart';
 import 'package:get/get.dart';
 
 class CategoryPage extends HookWidget {

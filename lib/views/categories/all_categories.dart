@@ -8,7 +8,7 @@ import 'package:foodchi/common/shimmers/foodlist_shimmer.dart';
 import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/hooks/fetch_all_categories.dart';
 import 'package:foodchi/models/categories.dart';
-import 'package:foodchi/views/categories/widget/category_tile.dart';
+import 'package:foodchi/views/categories/widgets/category_tile.dart';
 
 class AllCategories extends HookWidget {
   const AllCategories({super.key});

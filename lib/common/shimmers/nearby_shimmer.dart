@@ -4,6 +4,7 @@ import 'package:foodchi/common/shimmers/shimmer_widget.dart';
 import 'package:foodchi/constants/constants.dart';
 
 
+
 class NearbyShimmer extends StatelessWidget {
   const NearbyShimmer({super.key});
 

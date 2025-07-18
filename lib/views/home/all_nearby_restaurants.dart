@@ -8,7 +8,7 @@ import 'package:foodchi/common/shimmers/foodlist_shimmer.dart';
 import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/hooks/fetch_all_restaurants.dart';
 import 'package:foodchi/models/restaurants_model.dart';
-import 'package:foodchi/views/home/widget/restuarant_tile.dart';
+import 'package:foodchi/views/home/widgets/restuarant_tile.dart';
 
 class AllNearbyRestaurants extends HookWidget {
   const AllNearbyRestaurants({super.key});

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodchi/common/costum_container.dart';
 import 'package:foodchi/common/custom_appbar.dart';
+import 'package:foodchi/common/custom_container.dart';
 import 'package:foodchi/common/heading.dart';
 import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/controllers/category_controller.dart';
 import 'package:foodchi/views/home/all_fastest_foods_page.dart';
 import 'package:foodchi/views/home/all_nearby_restaurants.dart';
 import 'package:foodchi/views/home/recommendations_page.dart';
-import 'package:foodchi/views/home/widget/category_foods_list.dart';
-import 'package:foodchi/views/home/widget/category_list.dart';
-import 'package:foodchi/views/home/widget/food_list.dart';
-import 'package:foodchi/views/home/widget/nearby_restaurants_list.dart';
+import 'package:foodchi/views/home/widgets/category_foods_list.dart';
+import 'package:foodchi/views/home/widgets/category_list.dart';
+import 'package:foodchi/views/home/widgets/food_list.dart';
+import 'package:foodchi/views/home/widgets/nearby_restaurants_list.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {

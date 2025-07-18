@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:foodchi/common/costum_container.dart';
+import 'package:foodchi/common/custom_container.dart';
 import 'package:foodchi/common/custom_text_field.dart';
 import 'package:foodchi/common/shimmers/foodlist_shimmer.dart';
 import 'package:foodchi/constants/constants.dart';

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodchi/common/shimmers/shimmer_widget.dart';
 
 
-
 class CatergoriesShimmer extends StatelessWidget {
   const CatergoriesShimmer({super.key});
 

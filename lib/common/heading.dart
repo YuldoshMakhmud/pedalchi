@@ -23,14 +23,16 @@ class Heading extends StatelessWidget {
             child: ReusableText(
                 text: text, style: appStyle(16, kDark, FontWeight.bold)),
           ),
-        more == null  ?GestureDetector(
-            onTap: onTap,
-            child: Icon(
-              AntDesign.appstore1,
-              color: kSecondary,
-              size: 20.sp,
-            ),
-          ): const SizedBox.shrink(),
+          more == null
+              ? GestureDetector(
+                  onTap: onTap,
+                  child: Icon(
+                    AntDesign.appstore1,
+                    color: kSecondary,
+                    size: 20.sp,
+                  ),
+                )
+              : const SizedBox.shrink()
         ],
       ),
     );

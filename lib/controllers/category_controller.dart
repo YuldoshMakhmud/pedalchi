@@ -9,7 +9,6 @@ class CategoryController extends GetxController {
 
   set updateCategory(String value) {
     _category.value = value;
-    print(_category.value);
   }
 
   RxString _title = ''.obs;

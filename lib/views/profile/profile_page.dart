@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodchi/common/costum_container.dart';
+import 'package:foodchi/common/custom_container.dart';
 import 'package:foodchi/constants/constants.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -10,11 +10,9 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimary,
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(130.h),
-        child: Container(height: 130),
-      ),
-      body: SafeArea(child: CustomContainer(containerContent: Container())),
-    );
+      appBar: PreferredSize(preferredSize: Size.fromHeight(130.h), child: Container(height: 130,)),
+      body: SafeArea(
+        child: CustomContainer(containerContent: Container()),
+      ),);
   }
 }

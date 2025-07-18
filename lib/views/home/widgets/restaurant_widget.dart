@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:foodchi/common/app_style.dart';
 import 'package:foodchi/common/reusable_text.dart';
 import 'package:foodchi/constants/constants.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class RestaurantWidget extends StatelessWidget {
   const RestaurantWidget(

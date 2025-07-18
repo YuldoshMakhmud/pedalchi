@@ -10,12 +10,12 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
+      padding: EdgeInsets.symmetric(horizontal: 11.w, vertical: 5.h),
       height: 110.h,
       width: width,
       color: kOffWhite,
       child: Container(
-        margin: EdgeInsets.only(top: 20.h),
+        margin: EdgeInsets.only(top: 19.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget {
                   radius: 22.r,
                   backgroundColor: kSecondary,
                   backgroundImage: const NetworkImage(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s'),
+                      'https://d326fntlu7tb1e.cloudfront.net/uploads/bdec9d7d-0544-4fc4-823d-3b898f6dbbbf-vinci_03.jpeg'),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 6.h, left: 8.w),
@@ -51,7 +51,7 @@ class CustomAppBar extends StatelessWidget {
             ),
              Text(
               getTimeOfDay(),
-              style: const TextStyle(fontSize: 30),
+              style: const TextStyle(fontSize: 35),
             )
           ],
         ),
