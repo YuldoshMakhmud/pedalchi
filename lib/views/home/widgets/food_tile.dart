@@ -10,7 +10,7 @@ import 'package:foodchi/views/food/food_page.dart';
 import 'package:get/get.dart';
 
 class FoodTile extends StatelessWidget {
-  const FoodTile({super.key, required this.food, this.color});
+  FoodTile({super.key, required this.food, this.color});
 
   final FoodsModel food;
   final Color? color;

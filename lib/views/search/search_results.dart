@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodchi/constants/constants.dart';
-import 'package:foodchi/controllers/search_controller.dart';
+import 'package:foodchi/controllers/search_results_controller.dart';
 import 'package:foodchi/models/foods_model.dart';
 import 'package:foodchi/views/home/widgets/food_tile.dart';
 import 'package:get/get.dart';

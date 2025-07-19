@@ -7,7 +7,7 @@ import 'package:foodchi/common/custom_container.dart';
 import 'package:foodchi/common/custom_text_field.dart';
 import 'package:foodchi/common/shimmers/foodlist_shimmer.dart';
 import 'package:foodchi/constants/constants.dart';
-import 'package:foodchi/controllers/search_controller.dart';
+import 'package:foodchi/controllers/search_results_controller.dart';
 import 'package:foodchi/views/search/loading_widget.dart';
 import 'package:foodchi/views/search/search_results.dart';
 import 'package:get/get.dart';
