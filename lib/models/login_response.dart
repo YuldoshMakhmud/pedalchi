@@ -9,22 +9,22 @@ LoginResponse loginResponseFromJson(String str) => LoginResponse.fromJson(json.d
 String loginResponseToJson(LoginResponse data) => json.encode(data.toJson());
 
 class LoginResponse {
-    final String id;
-    final String username;
-    final String email;
-    final String fcm;
-    final bool verification;
-    final String phone;
-    final bool phoneVerification;
-    final String userType;
-    final String profile;
-    final String userToken;
+    String fcm;
+    String id;
+    String username;
+    String email;
+    bool verification;
+    String phone;
+    bool phoneVerification;
+    String userType;
+    String profile;
+    String userToken;
 
     LoginResponse({
+        required this.fcm,
         required this.id,
         required this.username,
         required this.email,
-        required this.fcm,
         required this.verification,
         required this.phone,
         required this.phoneVerification,
@@ -34,10 +34,10 @@ class LoginResponse {
     });
 
     factory LoginResponse.fromJson(Map<String, dynamic> json) => LoginResponse(
+        fcm: json["fcm"],
         id: json["_id"],
         username: json["username"],
         email: json["email"],
-        fcm: json["fcm"],
         verification: json["verification"],
         phone: json["phone"],
         phoneVerification: json["phoneVerification"],
@@ -47,10 +47,10 @@ class LoginResponse {
     );
 
     Map<String, dynamic> toJson() => {
+        "fcm": fcm,
         "_id": id,
         "username": username,
         "email": email,
-        "fcm": fcm,
         "verification": verification,
         "phone": phone,
         "phoneVerification": phoneVerification,

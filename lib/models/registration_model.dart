@@ -9,9 +9,9 @@ RegistrationModel registrationModelFromJson(String str) => RegistrationModel.fro
 String registrationModelToJson(RegistrationModel data) => json.encode(data.toJson());
 
 class RegistrationModel {
-    final String username;
-    final String email;
-    final String password;
+    String username;
+    String email;
+    String password;
 
     RegistrationModel({
         required this.username,

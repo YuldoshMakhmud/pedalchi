@@ -2,7 +2,6 @@
 //
 //     final loginModel = loginModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 LoginModel loginModelFromJson(String str) => LoginModel.fromJson(json.decode(str));
@@ -10,8 +9,8 @@ LoginModel loginModelFromJson(String str) => LoginModel.fromJson(json.decode(str
 String loginModelToJson(LoginModel data) => json.encode(data.toJson());
 
 class LoginModel {
-    final String email;
-    final String password;
+    String email;
+    String password;
 
     LoginModel({
         required this.email,

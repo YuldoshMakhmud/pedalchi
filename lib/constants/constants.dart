@@ -21,7 +21,7 @@ double width = 375.w;
 
 
 // const String {Environment.appBaseUrl} = "https://foodlybackend-production-4026.up.railway.app";
-const String appBaseUrl = "http://172.30.1.31:6013";
+const String appBaseUrl = "http://172.30.1.31:8080";
 
 
 final List<String> verificationReasons = [
