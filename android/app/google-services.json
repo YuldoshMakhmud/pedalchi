@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "234577028209",
+    "project_id": "foodchi-41cf2",
+    "storage_bucket": "foodchi-41cf2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234577028209:android:23aa90f0585818180aa7d0",
+        "android_client_info": {
+          "package_name": "com.foodchi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234577028209-ieiug4ubgaafupg3h4bvd2m60dpp0u34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01oumOZWb_CDI-bqQlI70oc5oBMf5gY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234577028209-ieiug4ubgaafupg3h4bvd2m60dpp0u34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
