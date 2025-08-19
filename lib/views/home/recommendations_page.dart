@@ -25,24 +25,24 @@ class RecommendationsPage extends HookWidget {
         elevation: 0,
         backgroundColor: kSecondary,
         title: ReusableText(
-            text: "Recommendations",
-            style: appStyle(13, kLightWhite, FontWeight.w600)),
+          text: "Recommendations",
+          style: appStyle(13, kLightWhite, FontWeight.w600),
+        ),
       ),
       body: BackGroundContainer(
         color: Colors.white,
-        child: isLoading
-              ? const FoodsListShimmer()
-              : Padding(
-          padding: EdgeInsets.all(12.h),
-          child: ListView(
-                  children: List.generate(foods!.length, (i) {
-                    FoodsModel food = foods[i];
-                    return FoodTile(
-                      food: food,
-                    );
-                  }),
+        child:
+            isLoading
+                ? const FoodsListShimmer()
+                : Padding(
+                  padding: EdgeInsets.all(12.h),
+                  child: ListView(
+                    children: List.generate(foods!.length, (i) {
+                      FoodsModel food = foods[i];
+                      return FoodTile(food: food);
+                    }),
+                  ),
                 ),
-        ),
       ),
     );
   }

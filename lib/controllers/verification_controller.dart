@@ -37,7 +37,7 @@ class VerificationController extends GetxController {
 
     Map<String, String> headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer $accessToken'
+      'Authorization': 'Bearer $accessToken',
     };
 
     try {
@@ -57,19 +57,24 @@ class VerificationController extends GetxController {
         setLoading = false;
 
         Get.snackbar(
-            "You are succefully verified", "Enjoy your awesome experience",
-            colorText: kLightWhite,
-            backgroundColor: kPrimary,
-            icon: const Icon(Ionicons.fast_food_outline));
+          "You are succefully verified",
+          "Enjoy your awesome experience",
+          colorText: kLightWhite,
+          backgroundColor: kPrimary,
+          icon: const Icon(Ionicons.fast_food_outline),
+        );
 
         Get.offAll(() => MainScreen());
       } else {
         var error = apiErrorFromJson(response.body);
 
-        Get.snackbar("Failed to verify account", error.message,
-            colorText: kLightWhite,
-            backgroundColor: kRed,
-            icon: const Icon(Icons.error_outline));
+        Get.snackbar(
+          "Failed to verify account",
+          error.message,
+          colorText: kLightWhite,
+          backgroundColor: kRed,
+          icon: const Icon(Icons.error_outline),
+        );
       }
     } catch (e) {
       debugPrint(e.toString());

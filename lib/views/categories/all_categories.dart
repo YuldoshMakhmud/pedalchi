@@ -23,22 +23,25 @@ class AllCategories extends HookWidget {
         elevation: 0,
         backgroundColor: kOffWhite,
         title: ReusableText(
-            text: "Categories", style: appStyle(12, kGray, FontWeight.w600)),
+          text: "Categories",
+          style: appStyle(12, kGray, FontWeight.w600),
+        ),
       ),
       body: BackGroundContainer(
         color: Colors.white,
         child: Container(
           padding: EdgeInsets.only(left: 12.w, top: 10.h),
           height: height,
-          child: isLoading
-              ? const FoodsListShimmer()
-              : ListView(
-                  scrollDirection: Axis.vertical,
-                  children: List.generate(categories!.length, (i) {
-                    CategoriesModel category = categories[i];
-                    return CategoryTile(category: category);
-                  }),
-                ),
+          child:
+              isLoading
+                  ? const FoodsListShimmer()
+                  : ListView(
+                    scrollDirection: Axis.vertical,
+                    children: List.generate(categories!.length, (i) {
+                      CategoriesModel category = categories[i];
+                      return CategoryTile(category: category);
+                    }),
+                  ),
         ),
       ),
     );

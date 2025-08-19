@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+String googleApiKey = "AIzaSyDo0GMQ-mdXjdPfOh4jH_bQh6AKsrD5Cow";
 
 const kPrimary = Color(0xFF30b9b2);
 const kPrimaryLight = Color(0xFF40F3EA);
@@ -19,17 +20,15 @@ const kOffWhite = Color(0xffF3F4F8);
 double height = 825.h;
 double width = 375.w;
 
-
 // const String {Environment.appBaseUrl} = "https://foodlybackend-production-4026.up.railway.app";
-const String appBaseUrl = "http://172.30.1.31:8080";
-
+const String appBaseUrl = "https://foodchibackend-production.up.railway.app";
 
 final List<String> verificationReasons = [
   'Real-time Updates: Get instant notifications about your order status.',
   'Direct Communication: A verified number ensures seamless communication.',
   'Enhanced Security: Protect your account and confirm orders securely.',
   'Effortless Rescheduling: Easily address issues with a quick call.',
-  'Exclusive Offers: Stay in the loop for special deals and promotions.'
+  'Exclusive Offers: Stay in the loop for special deals and promotions.',
 ];
 
 List<String> reasonsToAddAddress = [
@@ -39,6 +38,3 @@ List<String> reasonsToAddAddress = [
   "Streamlines the checkout process by saving addresses for quicker order placement.",
   "Enables management of multiple addresses (e.g., home, work) for easy switching.",
 ];
-
-
-

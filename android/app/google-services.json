@@ -33,6 +33,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234577028209:android:708700e5396e47c30aa7d0",
+        "android_client_info": {
+          "package_name": "com.pedalchi.foodchi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234577028209-ieiug4ubgaafupg3h4bvd2m60dpp0u34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA01oumOZWb_CDI-bqQlI70oc5oBMf5gY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234577028209-ieiug4ubgaafupg3h4bvd2m60dpp0u34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

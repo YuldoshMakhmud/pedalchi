@@ -86,10 +86,8 @@ class LoginController extends GetxController {
   LoginResponse? getUserInfo() {
     String? userId = box.read("userId");
     String? data;
-    if (userId != null) {
-      data = box.read(userId.toString());
-    }
-
+    data = box.read(userId.toString());
+  
     if (data != null) {
       return loginResponseFromJson(data);
     }

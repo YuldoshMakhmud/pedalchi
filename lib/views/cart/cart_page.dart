@@ -22,10 +22,8 @@ class CartPage extends StatelessWidget {
 
     String? token = box.read('token');
 
-    if (token != null) {
-      user = controller.getUserInfo();
-    }
-
+    user = controller.getUserInfo();
+  
     if (token == null) {
       return const LoginRedirect();
     }

@@ -24,24 +24,24 @@ class AllNearbyRestaurants extends HookWidget {
         elevation: 0,
         backgroundColor: kSecondary,
         title: ReusableText(
-            text: "Nearby Restaurants",
-            style: appStyle(13, kLightWhite, FontWeight.w600)),
+          text: "Nearby Restaurants",
+          style: appStyle(13, kLightWhite, FontWeight.w600),
+        ),
       ),
       body: BackGroundContainer(
         color: Colors.white,
-        child: isLoading
-            ? const FoodsListShimmer()
-            : Padding(
-                padding: EdgeInsets.all(12.h),
-                child: ListView(
-                  children: List.generate(restaurants!.length, (i) {
-                    RestaurantsModel restaurant = restaurants[i];
-                    return RestaurantTile(
-                      restaurant: restaurant,
-                    );
-                  }),
+        child:
+            isLoading
+                ? const FoodsListShimmer()
+                : Padding(
+                  padding: EdgeInsets.all(12.h),
+                  child: ListView(
+                    children: List.generate(restaurants!.length, (i) {
+                      RestaurantsModel restaurant = restaurants[i];
+                      return RestaurantTile(restaurant: restaurant);
+                    }),
+                  ),
                 ),
-              ),
       ),
     );
   }

@@ -19,15 +19,18 @@ class CategoryList extends HookWidget {
     return isLoading
         ? const CatergoriesShimmer()
         : Container(
-            height: 80.h,
-            padding: EdgeInsets.only(left: 12.w, top: 10.h),
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: List.generate(categoriesList!.length, (i) {
-                CategoriesModel category = categoriesList[i];
-                return CategoryWidget(category: category);
-              }),
-            ),
-          );
+          height: 80.h,
+          padding: EdgeInsets.only(left: 12.w, top: 10.h),
+          child:
+              categoriesList != null && categoriesList.isNotEmpty
+                  ? ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: List.generate(categoriesList.length, (i) {
+                      CategoriesModel category = categoriesList[i];
+                      return CategoryWidget(category: category);
+                    }),
+                  )
+                  : const Center(child: Text("No categories found")),
+        );
   }
 }
