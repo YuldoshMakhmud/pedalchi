@@ -7,6 +7,8 @@ import 'package:foodchi/controllers/login_controller.dart';
 import 'package:foodchi/models/login_response.dart';
 import 'package:foodchi/views/auth/login_redirect.dart';
 import 'package:foodchi/views/auth/verification_page.dart';
+import 'package:foodchi/views/profile/addresses_page.dart';
+import 'package:foodchi/views/profile/shipping_address.dart';
 import 'package:foodchi/views/profile/widget/profile_app_bar.dart';
 import 'package:foodchi/constants/constants.dart';
 import 'package:foodchi/views/profile/widget/profile_tile_widget.dart';
@@ -26,8 +28,10 @@ class ProfilePage extends StatelessWidget {
 
     String? token = box.read('token');
 
-    user = controller.getUserInfo();
-  
+    if (token != null) {
+      user = controller.getUserInfo();
+    }
+
     if (token == null) {
       return const LoginRedirect();
     }
@@ -39,83 +43,96 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kPrimary,
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(40.h), child: const ProfileAppBar()),
+        preferredSize: Size.fromHeight(40.h),
+        child: const ProfileAppBar(),
+      ),
       body: SafeArea(
         child: CustomContainer(
-            containerContent: Column(
-          children: [
-            UserInfoWidget(user: user),
-            SizedBox(
-              height: 10.h,
-            ),
-            Container(
-              height: 175.h,
-              decoration: const BoxDecoration(color: kLightWhite),
-              child: ListView(
-                padding: EdgeInsets.zero,
-                physics: const NeverScrollableScrollPhysics(),
-                children: [
-                  ProfileTileWidget(
+          containerContent: Column(
+            children: [
+              UserInfoWidget(user: user),
+              SizedBox(height: 10.h),
+              Container(
+                height: 175.h,
+                decoration: const BoxDecoration(color: kLightWhite),
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    ProfileTileWidget(
                       onTap: () {
                         Get.to(() => const LoginRedirect());
                       },
                       title: "My Orders",
-                      icon: Ionicons.fast_food_outline),
-                  ProfileTileWidget(
+                      icon: Ionicons.fast_food_outline,
+                    ),
+                    ProfileTileWidget(
                       onTap: () {},
                       title: "My Favorite Places",
-                      icon: Ionicons.heart_outline),
-                  ProfileTileWidget(
+                      icon: Ionicons.heart_outline,
+                    ),
+                    ProfileTileWidget(
                       onTap: () {},
                       title: "Review",
-                      icon: Ionicons.chatbubble_outline),
-                  ProfileTileWidget(
+                      icon: Ionicons.chatbubble_outline,
+                    ),
+                    ProfileTileWidget(
                       onTap: () {},
                       title: "Coupons",
-                      icon: MaterialCommunityIcons.tag_outline),
-                ],
+                      icon: MaterialCommunityIcons.tag_outline,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 15.h,
-            ),
-            Container(
-              height: 175.h,
-              decoration: const BoxDecoration(color: kLightWhite),
-              child: ListView(
-                padding: EdgeInsets.zero,
-                physics: const NeverScrollableScrollPhysics(),
-                children: [
-                  ProfileTileWidget(
-                      onTap: () {},
+              SizedBox(height: 15.h),
+              Container(
+                height: 175.h,
+                decoration: const BoxDecoration(color: kLightWhite),
+                child: ListView(
+                  padding: EdgeInsets.zero,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    ProfileTileWidget(
+                      onTap: () {
+                        Get.to(
+                          () => const Addresses(),
+                          transition: Transition.rightToLeft,
+                          duration: const Duration(milliseconds: 900),
+                        );
+                      },
                       title: "Shipping Address",
-                      icon: SimpleLineIcons.location_pin),
-                  ProfileTileWidget(
+                      icon: SimpleLineIcons.location_pin,
+                    ),
+                    ProfileTileWidget(
                       onTap: () {},
                       title: "Sevice Center",
-                      icon: AntDesign.customerservice),
-                  ProfileTileWidget(
+                      icon: AntDesign.customerservice,
+                    ),
+                    ProfileTileWidget(
                       onTap: () {},
                       title: "Coupons",
-                      icon: MaterialIcons.rss_feed),
-                  ProfileTileWidget(
-                      onTap: () {}, title: "Settings", icon: AntDesign.setting),
-                ],
+                      icon: MaterialIcons.rss_feed,
+                    ),
+                    ProfileTileWidget(
+                      onTap: () {},
+                      title: "Settings",
+                      icon: AntDesign.setting,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            CustomButton(
-              onTap: () {
-                controller.logout();
-              },
-              btnColor: kRed,
-              text: "Logout",
-              radius: 0,
-            )
-          ],
-        )),
+              SizedBox(height: 20.h),
+              CustomButton(
+                onTap: () {
+                  controller.logout();
+                },
+                btnColor: kRed,
+                text: "Logout",
+                radius: 0,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
