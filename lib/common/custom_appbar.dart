@@ -68,7 +68,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       ),
                       Obx(
                         () => SizedBox(
-                          width: width * 0.65,
+                          width: width * 0.55,
                           child: Text(
                             controller.address == ""
                                 ? controller.address == ''
